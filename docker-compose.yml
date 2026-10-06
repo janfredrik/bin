@@ -1,0 +1,24 @@
+services:
+  bin:
+    image: ghcr.io/janfredrik/bin:latest
+    container_name: bin
+    restart: unless-stopped
+    environment:
+      # Public address used when building links. Leave empty to derive it from
+      # the X-Forwarded-Proto / X-Forwarded-Host headers sent by nginx.
+      PUBLIC_URL: ""
+      # Trust X-Forwarded-* / X-Real-IP from the reverse proxy (rate limits use the client IP).
+      TRUST_PROXY: "1"
+      ID_LENGTH: "4"
+      MAX_PASTE_KB: "512"
+      RATE_CREATE_PER_10MIN: "30"
+      RATE_READ_PER_MIN: "120"
+    volumes:
+      - bin-data:/data
+    # Only reachable from the host (nginx). If nginx runs in Docker on the same
+    # network, remove "ports" and proxy to http://bin:8080 instead.
+    ports:
+      - "127.0.0.1:8080:8080"
+
+volumes:
+  bin-data:

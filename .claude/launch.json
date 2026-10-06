@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bin",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--disable-warning=ExperimentalWarning", "server.js"],
+      "env": { "PORT": "8090", "DATA_DIR": "./data" },
+      "port": 8090
+    }
+  ]
+}

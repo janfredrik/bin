@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <title>bin</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/static/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/vendor/highlight.min.js" defer></script>
+  <script src="/static/markdown.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body data-state="loading">
+  <svg width="0" height="0" class="sprite" aria-hidden="true">
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="1"/><path d="M15.5 8.5V4.5a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4"/></symbol>
+    <symbol id="i-raw" viewBox="0 0 24 24"><path d="M14 3.5H6.5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.1 2.1 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.3 2.4-5.2 3.6-8.3.3 1.9 1.4 3.2 2.6 3.7.2-2.8 1.4-5.4 3.8-7.2-.4 2.9.6 4.7 1.9 6.4 1.1 1.4 1.6 3 1.6 4.9 0 3.9-2.9 6.7-7 6.7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  </svg>
+
+  <header class="band">
+    <p class="mark">
+      <a class="brand" href="/" aria-label="bin, new paste">bin</a><button class="part" id="part" type="button" hidden aria-label="No link yet"><span class="part-host" id="part-host"></span><span class="part-id" id="part-id"></span></button>
+    </p>
+  </header>
+
+  <div class="meta">
+    <p class="meta-facts">
+      <span id="meta-lang">Plain text</span>
+      <span id="meta-size">0 bytes</span>
+      <span id="meta-lines">0 lines</span>
+    </p>
+    <div class="view-mode" id="view-mode" role="group" aria-label="Markdown view" hidden>
+      <button type="button" id="mode-rendered" aria-pressed="true">Rendered</button>
+      <button type="button" id="mode-source" aria-pressed="false">Source</button>
+    </div>
+    <p class="meta-status" id="status" role="status" aria-live="polite"></p>
+  </div>
+
+  <main class="sheet">
+    <div class="editor" id="editor">
+      <pre class="gutter" id="edit-gutter" aria-hidden="true">1</pre>
+      <label class="visually-hidden" for="paste">Paste content</label>
+      <textarea id="paste" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"
+        placeholder="Paste anything: PowerShell, Python, JSON, XML, logs, plain text…"></textarea>
+    </div>
+
+    <div class="viewer" id="viewer" hidden>
+      <div class="viewer-scroll" id="viewer-scroll" tabindex="0" aria-label="Paste content">
+        <pre class="gutter" id="view-gutter" aria-hidden="true"></pre>
+        <pre class="code"><code id="code"></code></pre>
+      </div>
+      <div class="md-scroll" id="md-scroll" tabindex="0" aria-label="Rendered Markdown" hidden>
+        <article class="md" id="md"></article>
+      </div>
+    </div>
+
+    <section class="notice" id="notice" hidden aria-labelledby="notice-title">
+      <div class="notice-inner">
+        <h1 class="notice-title"><svg class="i notice-icon" id="notice-icon"><use href="#i-lock"/></svg><span id="notice-title"></span></h1>
+        <p class="notice-body" id="notice-body"></p>
+        <form class="notice-form" id="notice-form">
+          <div class="notice-pw" id="notice-pw">
+            <label for="unlock-pw">Password</label>
+            <input id="unlock-pw" type="password" autocomplete="off" spellcheck="false">
+          </div>
+          <a class="btn" id="notice-new" href="/">
+            <svg class="i"><use href="#i-plus"/></svg>New paste
+          </a>
+        </form>
+        <p class="notice-error" id="notice-error" role="alert"></p>
+      </div>
+    </section>
+  </main>
+
+  <form class="spec" id="spec-create" hidden>
+    <div class="cell">
+      <label class="cell-label" for="lang">Language</label>
+      <select id="lang" class="select"></select>
+      <p class="cell-note" id="lang-note">Detected when you paste</p>
+    </div>
+
+    <div class="cell">
+      <span class="cell-label" id="expiry-label">Expires</span>
+      <div class="seg" id="expiry" role="radiogroup" aria-labelledby="expiry-label">
+        <input type="radio" name="expires" id="e-10m" value="10m"><label for="e-10m">10 min</label>
+        <input type="radio" name="expires" id="e-1h" value="1h"><label for="e-1h">1 h</label>
+        <input type="radio" name="expires" id="e-1d" value="1d" checked><label for="e-1d">1 day</label>
+        <input type="radio" name="expires" id="e-7d" value="7d"><label for="e-7d">7 days</label>
+        <input type="radio" name="expires" id="e-30d" value="30d"><label for="e-30d">30 days</label>
+      </div>
+      <p class="cell-note" id="expiry-note"></p>
+    </div>
+
+    <div class="cell cell-burn">
+      <span class="cell-label" id="burn-label">Burn after reading</span>
+      <label class="check">
+        <input type="checkbox" id="burn" aria-labelledby="burn-label">
+        <span class="check-box"><svg class="i"><use href="#i-check"/></svg></span>
+        <span class="check-text" id="burn-state">Off</span>
+      </label>
+      <p class="cell-note" id="burn-note">Readable until it expires</p>
+    </div>
+
+    <div class="cell cell-pw">
+      <label class="cell-label" for="pw">Password</label>
+      <input class="input" id="pw" type="password" autocomplete="new-password" spellcheck="false" placeholder="None">
+      <p class="cell-note" id="pw-note">Optional. Encrypts the paste.</p>
+    </div>
+
+    <button class="cell cell-go" id="create" type="submit">
+      <span class="go-label">Create link</span>
+      <span class="go-key" id="go-key">Ctrl + Enter</span>
+    </button>
+  </form>
+
+  <div class="spec spec-view" id="spec-view" hidden>
+    <div class="cell cell-link">
+      <span class="cell-label">Link</span>
+      <button class="link-out" id="link-copy" type="button">
+        <span id="link-text"></span>
+        <svg class="i"><use href="#i-copy"/></svg>
+      </button>
+      <p class="cell-note" id="link-note">Click to copy</p>
+    </div>
+    <div class="cell">
+      <span class="cell-label">Created</span>
+      <p class="cell-value" id="v-created"></p>
+      <p class="cell-note" id="v-flags"></p>
+    </div>
+    <div class="cell">
+      <span class="cell-label">Expires</span>
+      <p class="cell-value" id="v-expires"></p>
+      <p class="cell-note" id="v-expires-in"></p>
+    </div>
+    <div class="cell cell-fetch" id="fetch-cell">
+      <span class="cell-label">From a terminal</span>
+      <button class="link-out fetch-cmd" id="fetch-copy" type="button">
+        <span id="fetch-text"></span>
+        <svg class="i"><use href="#i-copy"/></svg>
+      </button>
+      <p class="cell-note" id="fetch-note"></p>
+    </div>
+    <div class="cell cell-actions">
+      <button class="btn btn-solid" id="copy-code" type="button"><svg class="i"><use href="#i-copy"/></svg><span>Copy<span class="long"> code</span></span></button>
+      <a class="btn" id="raw-link" href="#"><svg class="i"><use href="#i-raw"/></svg>Raw</a>
+      <button class="btn" id="edit-new" type="button"><svg class="i"><use href="#i-edit"/></svg><span>Edit<span class="long"> as new</span></span></button>
+      <a class="btn" href="/"><svg class="i"><use href="#i-plus"/></svg>New</a>
+    </div>
+  </div>
+  <div class="spec spec-gate" id="spec-gate" hidden>
+    <div class="cell">
+      <span class="cell-label" id="g-protect-label">Protection</span>
+      <p class="cell-value" id="g-protect"></p>
+      <p class="cell-note" id="g-protect-note"></p>
+    </div>
+    <div class="cell">
+      <span class="cell-label" id="g-size-label">Size</span>
+      <p class="cell-value" id="g-size"></p>
+      <p class="cell-note" id="g-lang"></p>
+    </div>
+    <div class="cell" id="g-expires-cell">
+      <span class="cell-label">Expires</span>
+      <p class="cell-value" id="g-expires"></p>
+      <p class="cell-note" id="g-expires-in"></p>
+    </div>
+    <button class="cell cell-go" id="notice-go" type="submit" form="notice-form">
+      <span class="go-label" id="notice-go-label"></span>
+      <span class="go-key">Enter</span>
+    </button>
+  </div>
+</body>
+</html>

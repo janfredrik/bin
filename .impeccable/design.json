@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T18:55:09.184Z",
+  "title": "Design System: bin",
+  "extensions": {
+    "colorMeta": {
+      "datasheet-blue": {
+        "role": "primary",
+        "displayName": "Datasheet Blue",
+        "canonical": "oklch(42.2% 0.116 251.0)",
+        "tonalRamp": [
+          "#000929",
+          "#002255",
+          "#00407a",
+          "#21609c",
+          "#4784c3",
+          "#6da9e9",
+          "#a5cffc",
+          "#dcf1ff"
+        ]
+      },
+      "burn-orange": {
+        "role": "secondary",
+        "displayName": "Burn Orange",
+        "canonical": "oklch(53.2% 0.169 38.0)",
+        "tonalRamp": [
+          "#220000",
+          "#4b0200",
+          "#751a00",
+          "#9c3917",
+          "#c26041",
+          "#e18b70",
+          "#f8baa6",
+          "#ffe6dc"
+        ]
+      },
+      "datasheet-paper": {
+        "role": "neutral",
+        "displayName": "Datasheet Paper",
+        "canonical": "oklch(97.2% 0.004 121.6)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242422",
+          "#3f403e",
+          "#5d5e5b",
+          "#80817e",
+          "#a4a5a2",
+          "#cacbc8",
+          "#eeefec"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(20.7% 0.008 248.2)",
+        "tonalRamp": [
+          "#090b0e",
+          "#212428",
+          "#3d4044",
+          "#5a5e62",
+          "#7d8185",
+          "#a1a5a9",
+          "#c7cbcf",
+          "#ebeff3"
+        ]
+      },
+      "hairline-rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "oklch(85.7% 0.013 244.3)",
+        "tonalRamp": [
+          "#070c10",
+          "#1f252a",
+          "#3a4146",
+          "#585f65",
+          "#7a8188",
+          "#9ea6ac",
+          "#c4ccd3",
+          "#e7f0f7"
+        ]
+      },
+      "pin-tint": {
+        "role": "neutral",
+        "displayName": "Pin Tint",
+        "canonical": "oklch(93.6% 0.011 243.7)",
+        "tonalRamp": [
+          "#070c10",
+          "#202529",
+          "#3b4145",
+          "#585e64",
+          "#7b8186",
+          "#9fa5ab",
+          "#c5cbd1",
+          "#e8eff6"
+        ]
+      },
+      "hl-string": {
+        "role": "code",
+        "displayName": "Code String Green",
+        "canonical": "oklch(47.1% 0.095 158.9)",
+        "tonalRamp": [
+          "#001301",
+          "#003011",
+          "#004e2c",
+          "#206e49",
+          "#48926b",
+          "#6db78f",
+          "#9fdbb8",
+          "#daf7e5"
+        ]
+      },
+      "hl-number": {
+        "role": "code",
+        "displayName": "Code Number Plum",
+        "canonical": "oklch(46.0% 0.152 345.7)",
+        "tonalRamp": [
+          "#1e0012",
+          "#44022f",
+          "#6c184e",
+          "#92366e",
+          "#b75c91",
+          "#d787b4",
+          "#f1b7d5",
+          "#ffe5f4"
+        ]
+      },
+      "hl-title": {
+        "role": "code",
+        "displayName": "Code Title Violet",
+        "canonical": "oklch(46.9% 0.152 301.7)",
+        "tonalRamp": [
+          "#120124",
+          "#2e104e",
+          "#4d2878",
+          "#6d469e",
+          "#8f6bc2",
+          "#b193e0",
+          "#d3bff6",
+          "#f3e9ff"
+        ]
+      },
+      "hl-attr": {
+        "role": "code",
+        "displayName": "Code Attribute Amber",
+        "canonical": "oklch(47.3% 0.099 77.4)",
+        "tonalRamp": [
+          "#1b0400",
+          "#3d1900",
+          "#5c3700",
+          "#7c5504",
+          "#a17834",
+          "#c79d5a",
+          "#e7c591",
+          "#fdecd2"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper",
+        "canonical": "oklch(17.5% 0.010 248.4)",
+        "tonalRamp": [
+          "#080c0f",
+          "#202529",
+          "#3c4045",
+          "#595e63",
+          "#7b8186",
+          "#a0a5ab",
+          "#c5cbd1",
+          "#e9eff5"
+        ]
+      },
+      "dark-signal-blue": {
+        "role": "primary",
+        "displayName": "Dark Signal Blue",
+        "canonical": "oklch(73.8% 0.110 247.6)",
+        "tonalRamp": [
+          "#000a28",
+          "#002454",
+          "#004276",
+          "#1e6198",
+          "#4585be",
+          "#6aaae6",
+          "#a2d0fb",
+          "#dbf2ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "part-number": {
+        "displayName": "Part Number",
+        "purpose": "Paste ID in the band slot only; 38px under 640px."
+      },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "The bin wordmark at band left."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Notice titles (password, burn, missing)."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Create / Open cell label."
+      },
+      "spec-value": {
+        "displayName": "Spec Value",
+        "purpose": "Stated facts in spec cells."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base text; notice body 16px/1.55."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Buttons and segments."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Consequence line under each spec cell."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase spec-cell and field labels, key hints."
+      },
+      "gutter": {
+        "displayName": "Gutter",
+        "purpose": "Line numbers on the 22px code line."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Editor and viewer content."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Byte and line counts in the meta rule."
+      }
+    },
+    "shadows": [
+      {
+        "name": "input-focus-underline",
+        "value": "inset 0 -1px 0 var(--band)",
+        "purpose": "Thickens a focused input bottom edge; a rule, not elevation. The system has no drop shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for all transitions and animations."
+      },
+      {
+        "name": "control",
+        "value": "140ms",
+        "purpose": "Button, segment and checkbox colour changes; check fade."
+      },
+      {
+        "name": "fill",
+        "value": "160ms",
+        "purpose": "Part slot and action cell background changes."
+      },
+      {
+        "name": "check-scale",
+        "value": "220ms",
+        "purpose": "Burn check mark scaling in from 0.6."
+      },
+      {
+        "name": "stamp",
+        "value": "520ms, 70ms stagger",
+        "purpose": "Part-number characters stamping in: from translateY(-0.35em) scale(1.25) blur(6px) to rest."
+      },
+      {
+        "name": "load",
+        "value": "900ms infinite",
+        "purpose": "2px blue loading bar sweeping the sheet top."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none",
+        "purpose": "All motion off under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "strip-reflow",
+        "value": "1080px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      }
+    ],
+    "frame": {
+      "bandHeight": "64px (56px mobile)",
+      "metaHeight": "34px (30px mobile)",
+      "gutterWidth": "60px (44px mobile)",
+      "lineHeight": "22px"
+    }
+  },
+  "components": [
+    {
+      "name": "Title Band + Part Number Slot",
+      "kind": "nav",
+      "refersTo": "title-band",
+      "description": "Blue band with wordmark at left and the recessed deep-blue part-number slot flush right; the slot copies the link.",
+      "html": "<header class=\"ds-band\"><a class=\"ds-brand\" href=\"#\">bin</a><button class=\"ds-part\" type=\"button\"><span class=\"ds-part-prefix\">bin/</span><span class=\"ds-part-id\">k7qx</span></button></header>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-band{display:flex;align-items:center;gap:18px;height:64px;padding-left:20px;background:var(--band);color:var(--band-ink);font-family:var(--sans)} .ds-brand{color:inherit;text-decoration:none;font-weight:900;font-stretch:72%;font-size:34px;line-height:1;letter-spacing:-0.02em} .ds-part{margin-left:auto;align-self:stretch;display:flex;align-items:center;gap:2px;padding:0 22px;border:0;background:var(--band-deep);color:var(--band-ink);font:inherit;cursor:pointer;transition:background-color 160ms var(--ease)} .ds-part:hover{background:#062f53} .ds-part:focus-visible{outline:2px solid var(--band-ink);outline-offset:-4px} .ds-part-prefix{color:var(--band-ink-2);font-size:22px;font-weight:500;font-stretch:75%;padding-top:6px} .ds-part-id{font-size:46px;line-height:1;font-weight:850;font-stretch:68%;letter-spacing:0.01em;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Meta Rule",
+      "kind": "custom",
+      "refersTo": "meta-rule",
+      "description": "One-line facts rule under the band: language, bytes, lines; status at right.",
+      "html": "<div class=\"ds-meta\"><p><span class=\"ds-lang\">PowerShell</span><span class=\"ds-fig\">746 bytes</span><span class=\"ds-fig\">19 lines</span></p><p class=\"ds-ok\">Link copied</p></div>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-meta{display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 20px;border-bottom:1px solid var(--rule);background:var(--paper);font:12px var(--sans);color:var(--ink-2)} .ds-meta p{margin:0} .ds-meta span+span::before{content:\"\";display:inline-block;width:1px;height:11px;margin:0 12px;vertical-align:-1px;background:var(--rule)} .ds-lang{color:var(--ink);font-weight:650;font-stretch:85%;letter-spacing:0.05em;text-transform:uppercase} .ds-fig{font-family:var(--mono);font-size:11.5px} .ds-ok{font-weight:600;color:var(--ink)} .ds-ok::before{content:\"\";display:inline-block;width:7px;height:7px;margin-right:8px;background:var(--band);vertical-align:1px}"
+    },
+    {
+      "name": "Gutter + Editor",
+      "kind": "custom",
+      "refersTo": "gutter",
+      "description": "Tinted pin-number gutter locked to the 22px code line.",
+      "html": "<div class=\"ds-ed\"><pre class=\"ds-gut\">1\n2\n3</pre><pre class=\"ds-code\">param(\n  [int]$Timeout = 30\n)</pre></div>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-ed{display:grid;grid-template-columns:auto 1fr;background:var(--sheet)} .ds-gut{margin:0;width:60px;padding:14px 12px 14px 0;background:var(--tint);border-right:1px solid var(--rule);color:var(--ink-3);font:500 12px/22px var(--sans);font-stretch:80%;font-variant-numeric:tabular-nums;text-align:right} .ds-code{margin:0;padding:14px 20px;font:400 13.5px/22px var(--mono);color:var(--ink)}"
+    },
+    {
+      "name": "Spec Strip Cells",
+      "kind": "card",
+      "refersTo": "spec-cell",
+      "description": "Ruled cells: uppercase label, value or control, and a consequence note.",
+      "html": "<div class=\"ds-spec\"><div class=\"ds-cell\"><span class=\"ds-lbl\">Created</span><p class=\"ds-val\">Tue 6 Oct 20:42</p><p class=\"ds-note\">Anyone with the link</p></div><div class=\"ds-cell\"><span class=\"ds-lbl\">Expires</span><p class=\"ds-val\">Tue 13 Oct 20:42</p><p class=\"ds-note ds-burn\">In 8 min</p></div></div>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-spec{display:grid;grid-template-columns:repeat(2,minmax(180px,auto));border-top:2px solid var(--ink);background:var(--paper);font-family:var(--sans);color:var(--ink)} .ds-cell{display:grid;gap:6px;padding:10px 16px 12px;border-right:1px solid var(--rule)} .ds-cell:last-child{border-right:0} .ds-lbl{font:650 11px var(--sans);font-stretch:85%;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-2);} .ds-val{margin:0;height:34px;display:flex;align-items:center;font-size:18px;font-weight:700;font-stretch:80%} .ds-note{margin:0;font-size:12.5px;color:var(--ink-2)} .ds-burn{color:var(--burn);font-weight:600}"
+    },
+    {
+      "name": "Action Cell",
+      "kind": "button",
+      "refersTo": "spec-cell-go",
+      "description": "Full-height blue Create / Open cell docked at the strip end; orange in the burn gate.",
+      "html": "<button class=\"ds-go\" type=\"button\"><span class=\"ds-go-l\">Create link</span><span class=\"ds-go-k\">Ctrl + Enter</span></button>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-go{display:grid;gap:6px;min-width:220px;padding:12px 22px;border:0;background:var(--band);color:var(--band-ink);text-align:left;font-family:var(--sans);cursor:pointer;transition:background-color 160ms var(--ease)} .ds-go:hover{background:var(--band-deep)} .ds-go:focus-visible{outline:2px solid var(--band-ink);outline-offset:-5px} .ds-go-l{font-size:24px;line-height:1;font-weight:850;font-stretch:72%} .ds-go-k{font-size:11px;font-weight:600;font-stretch:85%;letter-spacing:0.07em;text-transform:uppercase;color:var(--band-ink-2)}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segment",
+      "description": "Expiry choice: square collapsed segments, selected inverts to solid ink.",
+      "html": "<div class=\"ds-seg\"><input type=\"radio\" name=\"ds-e\" id=\"ds-e1\"><label for=\"ds-e1\">10 min</label><input type=\"radio\" name=\"ds-e\" id=\"ds-e2\" checked><label for=\"ds-e2\">1 day</label><input type=\"radio\" name=\"ds-e\" id=\"ds-e3\"><label for=\"ds-e3\">7 days</label></div>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-seg{display:flex;height:34px;font-family:var(--sans)} .ds-seg input{position:absolute;opacity:0} .ds-seg label{display:grid;place-items:center;padding:0 11px;border:1px solid var(--rule);margin-left:-1px;font-size:13.5px;font-weight:600;font-stretch:85%;color:var(--ink-2);cursor:pointer;transition:background-color 140ms var(--ease),color 140ms var(--ease)} .ds-seg label:hover{background:var(--tint);color:var(--ink)} .ds-seg input:checked+label{position:relative;background:var(--ink);border-color:var(--ink);color:var(--paper)} .ds-seg input:focus-visible+label{outline:2px solid var(--band);outline-offset:2px;position:relative;z-index:1}"
+    },
+    {
+      "name": "Burn Checkbox",
+      "kind": "input",
+      "refersTo": "burn-check",
+      "description": "Square 20px box that fills burn orange when on.",
+      "html": "<label class=\"ds-chk\"><input type=\"checkbox\" checked><span class=\"ds-box\"><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg></span><span class=\"ds-txt\">On</span></label>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-chk{display:flex;align-items:center;gap:10px;height:34px;width:max-content;cursor:pointer;font-family:var(--sans)} .ds-chk input{position:absolute;opacity:0} .ds-box{display:grid;place-items:center;width:20px;height:20px;border:1.5px solid var(--ink-2);background:var(--sheet);color:var(--on-burn);transition:background-color 140ms var(--ease),border-color 140ms var(--ease)} .ds-box svg{opacity:0;transform:scale(0.6);transition:opacity 140ms var(--ease),transform 220ms var(--ease)} .ds-chk input:checked+.ds-box{background:var(--burn);border-color:var(--burn)} .ds-chk input:checked+.ds-box svg{opacity:1;transform:none} .ds-chk input:focus-visible+.ds-box{outline:2px solid var(--band);outline-offset:2px} .ds-txt{font-weight:600;font-stretch:85%;font-size:14px} .ds-chk input:checked~.ds-txt{color:var(--burn)}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Default square outline button with stroked icon.",
+      "html": "<button class=\"ds-btn\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>New</button>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;border:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font:600 14px/1 var(--sans);font-stretch:88%;cursor:pointer;transition:background-color 140ms var(--ease),color 140ms var(--ease)} .ds-btn:hover{background:var(--tint)} .ds-btn:focus-visible{outline:2px solid var(--band);outline-offset:2px}"
+    },
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "The single solid blue button in a strip (Copy code).",
+      "html": "<button class=\"ds-btn-solid\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"8.5\" y=\"8.5\" width=\"12\" height=\"12\" rx=\"1\"/><path d=\"M15.5 8.5V4.5a1 1 0 0 0-1-1h-10a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4\"/></svg>Copy code</button>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-btn-solid{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;border:1px solid var(--band);border-radius:0;background:var(--band);color:var(--band-ink);font:600 14px/1 var(--sans);font-stretch:88%;cursor:pointer;transition:background-color 140ms var(--ease)} .ds-btn-solid:hover{background:var(--band-deep);border-color:var(--band-deep)} .ds-btn-solid:focus-visible{outline:2px solid var(--band);outline-offset:2px}"
+    },
+    {
+      "name": "Ruled Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square field with a darker bottom edge; focus goes blue with an inset underline.",
+      "html": "<label class=\"ds-f\"><span>Password</span><input class=\"ds-in\" type=\"password\" placeholder=\"None\"></label>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-f{display:grid;gap:6px;font-family:var(--sans)} .ds-f span{font:650 11px var(--sans);font-stretch:85%;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-2);} .ds-in{height:34px;padding:0 10px;border:1px solid var(--rule);border-bottom-color:var(--ink-2);border-radius:0;background:var(--sheet);color:var(--ink);font:400 13px var(--mono)} .ds-in::placeholder{color:var(--ink-3);font-family:var(--sans)} .ds-in:hover{border-color:var(--ink-3);border-bottom-color:var(--ink)} .ds-in:focus{outline:none;border-color:var(--band);box-shadow:inset 0 -1px 0 var(--band)}"
+    },
+    {
+      "name": "Notice",
+      "kind": "card",
+      "refersTo": "notice",
+      "description": "Sheet-replacing notice for password, burn and missing states, under a heavy top rule.",
+      "html": "<section class=\"ds-notice\"><h1><svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"5\" y=\"10.5\" width=\"14\" height=\"10\" rx=\"1\"/><path d=\"M8 10.5V7.5a4 4 0 0 1 8 0v3\"/></svg>Password required</h1><p>This paste is encrypted. Enter its <strong>password</strong> to read it.</p></section>",
+      "css": ":host{--paper:#f5f6f3;--sheet:#fbfcfa;--ink:#15181b;--ink-2:#48525a;--ink-3:#5c656e;--rule:#c9d1d8;--tint:#e4ebf1;--band:#0b4f8a;--band-deep:#083d6b;--band-ink:#fff;--band-ink-2:#bcd3e8;--burn:#b93c0a;--on-burn:#fff;--sans:Archivo,\"Helvetica Neue\",Arial,sans-serif;--mono:\"JetBrains Mono\",ui-monospace,Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-notice{max-width:560px;padding-top:18px;border-top:3px solid var(--ink);font-family:var(--sans);color:var(--ink)} .ds-notice h1{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-size:40px;line-height:1.05;font-weight:850;font-stretch:70%;letter-spacing:-0.01em} .ds-notice p{margin:0;color:var(--ink-2);font-size:16px;line-height:1.55} .ds-notice strong{color:var(--ink);font-weight:650}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Component Datasheet",
+    "overview": "Every paste is a part. Its short code is set in a blue title band like a component part number, and its terms (language, expiry, burn, password) are listed in a ruled spec strip docked at the bottom. The paste itself sits on a near-white sheet with a tinted line-number gutter that reads like a pin column. The frame never changes between create, view, password gate and missing states; only the content of the sheet and the cells of the strip change.\n\nThe density is technical and calm: hairline cool-grey rules divide everything, nothing floats, nothing is rounded, nothing casts a shadow. Scale contrast does the hierarchy work. A condensed black Archivo part number sits against small, tracked uppercase cell labels, and JetBrains Mono is kept for code and figures. The one solid colour is datasheet blue. Orange appears only when something is destructive or ephemeral.\n\nDark mode inverts the paper to a blue-black sheet; the title band stays blue.",
+    "keyCharacteristics": [
+      "One fixed frame: 64px band, 34px meta rule, full-height sheet, ruled spec strip (`grid-template-rows: band meta 1fr auto`).",
+      "Square corners everywhere (0 radius); depth from rules and fills, never shadows.",
+      "Archivo variable width axis carries hierarchy: 68-72% width for display, 80-88% for values and controls, 100% for body.",
+      "Blue is structure and primary action; orange is burn and danger only.",
+      "A shared 22px line rhythm locks gutter and code together."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Blue is the only structural colour. The band, the primary action cell and focus all use it, and no other hue gets used for chrome.",
+        "section": "colors"
+      },
+      {
+        "name": "The Burn Is Orange Rule",
+        "body": "Orange means something will be destroyed or is about to expire. It never decorates and never marks a non-destructive primary action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Hierarchy comes from Archivo's width axis together with its weight. The bigger and more important the text, the narrower it gets (part number 68%, controls 88%, body 100%).",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is For Machines Rule",
+        "body": "JetBrains Mono is for code, links, commands, byte/line counts and typed input. Labels, values and prose stay in Archivo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Not Raised Rule",
+        "body": "Separate things with rules and fills. Nothing floats over anything else.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the four-row frame (band, meta rule, sheet, spec strip) on every state; change cell contents, not the frame.",
+      "**Do** give every spec option a one-line note that states its consequence.",
+      "**Do** set part numbers, values and action labels in condensed heavy Archivo (68-80% width), and code, links and figures in JetBrains Mono.",
+      "**Do** separate with 1px hairline rules, and use the 2px/3px ink rules only for strip and notice tops.",
+      "**Do** define every colour as a custom property with a dark-mode counterpart."
+    ],
+    "donts": [
+      "**Don't** round corners or add drop shadows; the system is square and flat (0px radius, no elevation).",
+      "**Don't** use orange for anything that is not destructive, ephemeral or an error.",
+      "**Don't** introduce a second structural hue alongside datasheet blue.",
+      "**Don't** put more than one solid blue button in a strip; the action cell or Copy code is the single primary."
+    ]
+  }
+}
