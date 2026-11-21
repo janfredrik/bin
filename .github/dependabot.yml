@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # GitHub Actions used in .github/workflows
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # Base image in the Dockerfile (node:24-alpine)
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      # Stay on the Node 24 line; bump majors deliberately.
+      - dependency-name: node
+        update-types: ["version-update:semver-major"]
